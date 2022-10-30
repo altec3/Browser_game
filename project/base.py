@@ -28,13 +28,13 @@ class Arena(metaclass=BaseSingleton):
 
         if self.player.hp > 0 and self.enemy.hp > 0:
             return None
+
         if self.player.hp <= 0 and self.enemy.hp <= 0:
             self.battle_result = "Ничья"
         elif self.player.hp <= 0:
-            self.battle_result = "Игрок проиграл битву"
+            self.battle_result = f"{self.player.name} проиграл битву"
         else:
-            self.battle_result = "Игрок выиграл битву"
-
+            self.battle_result = f"{self.player.name} выиграл битву"
         return self._end_game()
 
     def _stamina_regeneration(self):
