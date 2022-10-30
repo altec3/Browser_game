@@ -31,3 +31,30 @@
 - Предложение выбрать броню (тег`select`), сформированный на основе имеющихся видов брони, доступных в программе (также исходя из сведений файла `equipment.json`).
 - Кнопка для отправки заполненных данных.
 </details>
+
+---
+### Запуск сервера
+
+#### Bash (Linux/MACOS)
+
+```python
+export FLASK_APP=run.py
+export FLASK_ENV='development'
+flask run
+```
+
+#### CMD (Windows)
+
+```python
+set FLASK_APP=run.py
+set FLASK_ENV=development
+flask run
+```
+
+#### PowerShell (Windows)
+
+```python
+$env:FLASK_APP = "run"
+$env:FLASK_ENV = "development"
+flask run
+```
